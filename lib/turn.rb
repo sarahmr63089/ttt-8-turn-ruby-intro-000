@@ -7,6 +7,8 @@ def display_board(board)
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
+
+
 def input_to_index(input)
     (input.to_i) - 1
 end
@@ -35,7 +37,7 @@ end
 
 def turn(board)
   puts "Please enter 1-9:"
-  gets.input
+  input = gets.strip
   input_to_index(input)
   if valid_move?(board, index)
     move(board, index, char = X)
